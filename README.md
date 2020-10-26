@@ -4,7 +4,7 @@
 
 1. [Print](#print)
 1. [Hashmap](#hashmap)
-1. []()
+1. [Math](#math)
 
 [Algorithms](#algorithms)
 
