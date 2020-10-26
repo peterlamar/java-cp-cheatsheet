@@ -2,22 +2,31 @@
 
 [Language Mechanics](#language-mechanics)
 
-## Print
-
-```Java
-System.out.print("hi");
-```
-
-## Hashmap
-
-```Java
-Map<Integer, Integer> map = new HashMap<>();
-map.put(0, 3);
-System.out.print(map.get(0)); // 3
-```
+1. [Print](#print)
+1. [Hashmap](#hashmap)
 
 [Algorithms](#algorithms)
 
 ## Language Mechanics
 
+### Print
+
+```Java
+System.out.print("hi");
+```
+
+### Hashmap
+
+```Java
+import java.util.*;
+Map<Integer, Integer> map = new HashMap<>();
+map.put(0, 3);
+System.out.print(map.containsKey(0)); // True
+System.out.print(map.get(0)); // 3
+```
+
 ## Algorithms
+
+## Useful Links
+
+[Java playground](https://code.sololearn.com/)
