@@ -3,6 +3,7 @@
 [Language Mechanics](#language-mechanics)
 
 1. [Print](#print)
+1. [String](#string)
 1. [Hashmap](#hashmap)
 1. [Math](#math)
 
@@ -14,6 +15,17 @@
 
 ```Java
 System.out.print("hi");
+```
+
+### String
+
+```Java
+String str = new String("Welcome to BeginnersBook.com");
+char[] array= str.toCharArray();
+System.out.print("Content of Array:");
+for(char c: array){
+    System.out.print(c); // ontent of Array:Welcome to BeginnersBook.com
+}
 ```
 
 ### Hashmap
