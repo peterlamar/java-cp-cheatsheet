@@ -2,30 +2,49 @@
 
 [Language Mechanics](#language-mechanics)
 
-1. [Print](#print)
+1. [Loop](#loop)
 1. [String](#string)
 1. [Hashmap](#hashmap)
 1. [Math](#math)
+1. [Compare](#compare)
 
 [Algorithms](#algorithms)
 
 ## Language Mechanics
 
-### Print
+### Loop
+
 
 ```Java
-System.out.print("hi");
+int ar[] = {1, 2, 3, 4, 5, 6, 7, 8}; 
+for (int i : ar) { 
+    System.out.print(i + " "); // 1 2 3 4 5 6 7 8 
+}
 ```
 
 ### String
+
+Access Character
+```Java
+String str = new String("Welcome to BeginnersBook.com");
+for (int x = 0; x < str.length(); x++){
+    System.out.print(str.charAt(x)); // Welcome to BeginnersBook.com
+}
+```
 
 ```Java
 String str = new String("Welcome to BeginnersBook.com");
 char[] array= str.toCharArray();
 System.out.print("Content of Array:");
 for(char c: array){
-    System.out.print(c); // ontent of Array:Welcome to BeginnersBook.com
+    System.out.print(c); // Content of Array:Welcome to BeginnersBook.com
 }
+```
+
+```Java
+String str = new String("Welcome to BeginnersBook.com"); 
+System.out.println(str.substring(10)); // BeginnersBook.com
+System.out.println(str.substring(0,10)); // Welcome to
 ```
 
 ### Hashmap
@@ -44,6 +63,45 @@ System.out.print(map.get(0)); // 3
 int x = 0;
 x = Math.max(1,2);
 System.out.print(x); // 2
+```
+
+### Compare
+
+```Java
+/*
+-1 : o1 < o2
+0 : o1 == o2
++1 : o1 > o2
+*/
+public String[] reorderLogFiles(String[] logs) {
+    Comparator<String> myComp = new Comparator<String>() {
+        @Override
+        public int compare(String s1, String s2){
+            int s1Space = s1.indexOf(' ');
+            int s2Space = s2.indexOf(' ');
+            char s1FirstChar = s1.charAt(s1Space + 1);
+            char s2FirstChar = s2.charAt(s2Space + 1);
+            
+            if (s1FirstChar <= '9'){ 
+                if (s2FirstChar <= '9'){
+                    return 0;
+                }
+                else return 1; // s1IsNum < s2IsChar
+            }
+            if (s2FirstChar <= '9') return -1; // s1IsChar > s1IsNum
+            
+            int pre = s1.substring(s1Space+1).compareTo(s2.substring(s2Space+1));
+            if (pre == 0){
+                return s1.substring(0, s1Space).compareTo(s2.substring(0,s2Space));
+            }
+            
+            return pre;
+        }
+    };
+    
+    Arrays.sort(logs, myComp);
+    return logs;
+}
 ```
 
 ## Algorithms
