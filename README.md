@@ -5,6 +5,7 @@
 1. [Loop](#loop)
 1. [String](#string)
 1. [Stack](#stack)
+1. [list](#list)
 1. [Hashmap](#hashmap)
 1. [Math](#math)
 1. [Compare](#compare)
@@ -56,6 +57,16 @@ stack.push("A");
 stack.push("Herring");
 System.out.println(stack.pop());
 System.out.println(stack.peek());
+```
+
+### List
+
+```Java
+List<Integer> l1 = new ArrayList<Integer>(); 
+l1.add(0, 1); // Adds 1 at 0 index 
+l1.add(1, 2); // Adds 2 at 1 index 
+l1.add(4);
+System.out.println(l1); // [1, 2, 4]
 ```
 
 ### Hashmap
