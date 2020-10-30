@@ -4,6 +4,7 @@
 
 1. [Loop](#loop)
 1. [String](#string)
+1. [Stack](#stack)
 1. [Hashmap](#hashmap)
 1. [Math](#math)
 1. [Compare](#compare)
@@ -45,6 +46,16 @@ for(char c: array){
 String str = new String("Welcome to BeginnersBook.com"); 
 System.out.println(str.substring(10)); // BeginnersBook.com
 System.out.println(str.substring(0,10)); // Welcome to
+```
+
+### Stack
+
+```Java
+Stack<String> stack = new Stack<String>(); 
+stack.push("A");
+stack.push("Herring");
+System.out.println(stack.pop());
+System.out.println(stack.peek());
 ```
 
 ### Hashmap
