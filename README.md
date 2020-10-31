@@ -16,7 +16,7 @@
 
 ### Loop
 
-
+Enhanced loop for iterating through collection (Java 5)
 ```Java
 int ar[] = {1, 2, 3, 4, 5, 6, 7, 8}; 
 for (int i : ar) { 
@@ -47,6 +47,27 @@ for(char c: array){
 String str = new String("Welcome to BeginnersBook.com"); 
 System.out.println(str.substring(10)); // BeginnersBook.com
 System.out.println(str.substring(0,10)); // Welcome to
+```
+
+```Java
+import java.util.*; 
+class Playground {
+    public static void main(String[ ] args) {
+        Stack<String> stk = new Stack<String>();
+        String str = new String("/home/foo/"); 
+        for (String cur : str.split("/")){
+            stk.add(cur); // home foo
+        }
+        System.out.println(String.join("/", stk)); // /home/foo
+    }
+}
+```
+
+```Java
+String s1 = new String("HELLO"); 
+String s2 = new String("HELLO"); 
+System.out.println(s1 == s2);      // false
+System.out.println(s1.equals(s2)); // true
 ```
 
 ### Stack
