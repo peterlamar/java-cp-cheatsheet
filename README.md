@@ -6,7 +6,8 @@
 1. [String](#string)
 1. [Stack](#stack)
 1. [list](#list)
-1. [Hashmap](#hashmap)
+1. [HashMap](#hashmap)
+1. [HashSet](#hashset)
 1. [Math](#math)
 1. [Compare](#compare)
 
@@ -70,6 +71,22 @@ System.out.println(s1 == s2);      // false
 System.out.println(s1.equals(s2)); // true
 ```
 
+### Scanner
+
+Read input from stdin/parse strings
+
+```Java
+Scanner scan = new Scanner(System.in);
+int i = scan.nextInt();
+double d = scan.nextDouble();
+String s = scan.nextLine();
+if (s.length() == 0)
+    s = scan.nextLine();
+System.out.println("String: " + s);
+System.out.println("Double: " + d);
+System.out.println("Int: " + i);
+```
+
 ### Stack
 
 ```Java
@@ -90,7 +107,7 @@ l1.add(4);
 System.out.println(l1); // [1, 2, 4]
 ```
 
-### Hashmap
+### HashMap
 
 ```Java
 import java.util.*;
@@ -98,6 +115,21 @@ Map<Integer, Integer> map = new HashMap<>();
 map.put(0, 3);
 System.out.print(map.containsKey(0)); // True
 System.out.print(map.get(0)); // 3
+```
+
+### HashSet
+
+```Java
+HashSet <String> h = new HashSet<>(); 
+h.add("India");
+h.add("Australia");
+h.add("Spain");
+System.out.println("List contains India " + h.contains("India"));
+h.remove("Australia");
+System.out.println("After removing Australia " + h);
+Iterator<String> i = h.iterator();
+while (i.hasNext())
+    System.out.println(i.next());
 ```
 
 ### Math
