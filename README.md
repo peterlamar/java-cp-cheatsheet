@@ -4,12 +4,14 @@
 
 1. [Loop](#loop)
 1. [String](#string)
+1. [Scanner](#scanner)
 1. [Stack](#stack)
 1. [list](#list)
 1. [HashMap](#hashmap)
 1. [HashSet](#hashset)
 1. [Math](#math)
 1. [Compare](#compare)
+1. [Date](#date)
 
 [Algorithms](#algorithms)
 
@@ -85,6 +87,19 @@ if (s.length() == 0)
 System.out.println("String: " + s);
 System.out.println("Double: " + d);
 System.out.println("Int: " + i);
+```
+
+```Java
+Scanner sc=new Scanner(System.in);
+System.out.println("================================");
+for(int i=0;i<3;i++)
+{
+    String s1=sc.next();
+    int x=sc.nextInt();
+    System.out.printf("%-15s%03d\n",s1,x); // cpp            065 
+
+}
+System.out.println("================================");
 ```
 
 ### Stack
@@ -176,6 +191,17 @@ public String[] reorderLogFiles(String[] logs) {
     
     Arrays.sort(logs, myComp);
     return logs;
+}
+```
+
+### Date
+
+
+```Java
+import java.time.LocalDate;
+public static String findDay(int month, int day, int year) {
+    LocalDate dt = LocalDate.of(year, month, day);
+    return dt.getDayOfWeek().name(); // 'Wednesday'
 }
 ```
 
