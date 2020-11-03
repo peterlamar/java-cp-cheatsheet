@@ -167,8 +167,9 @@ public static void main(String[] args){
 }
 ```
 
-[Learn Regex](https://regexone.com/)
-[Test Regex](https://regexr.com/)
+1. [Learn Regex](https://regexone.com/)
+1. [Test Regex](https://regexr.com/)
+1. [Test Regex simple](https://regex101.com/)
 
 ### Scanner
 
