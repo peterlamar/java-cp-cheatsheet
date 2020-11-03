@@ -4,6 +4,7 @@
 
 1. [Loop](#loop)
 1. [String](#string)
+1. [Regex](#regex)
 1. [Scanner](#scanner)
 1. [Stack](#stack)
 1. [list](#list)
@@ -28,6 +29,32 @@ for (int i : ar) {
 ```
 
 ### String
+
+| Syntax | Description |
+| --- | ----------- |
+| s.length() | length of s |
+| s.charAt() | extract ith character |
+| s.substring(start, end) | substring from start to end-1 |
+| s.toUpperCase() | returns copy of s in ALL CAPS |
+| s.toLowerCase() | returns copy of s in lowercase |
+| s.indexOf(x) | index of first occurence of x|
+| s.replace(old, new) | search and replace|
+| s.split(regex) | split string into tokens |
+| s.trim() | trim surrounding whitespace |
+| s.equals(s2) | true if s equals s2 |
+| s.compareTo(s2) | 0 is equal/+ if s > s2/- if s<s2 |
+| s.matches(regex) | if this string matches regex |
+
+[Reference](https://docs.oracle.com/javase/6/docs/api/java/lang/String.html)
+
+Data Conversions
+
+| Syntax | Description |
+| --- | ----------- |
+| int i = integer.parseInt(str) | str to int |
+| double d = Double.parseDouble(str) | str to double |
+| String s = String.valueOf(value) | any to string |
+
 
 Access Character
 ```Java
@@ -67,11 +94,81 @@ class Playground {
 ```
 
 ```Java
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    String s = scan.nextLine();
+    String dl = "[!,?._'@\\s]+";
+    s = s.trim();
+    if (s.length() == 0){
+        System.out.println(0);
+        return;
+    }
+    String []tokens = s.split(dl);
+    System.out.println(tokens.length);
+    for (String t : tokens){
+        System.out.println(t);
+    }
+    scan.close();
+}
+```
+
+```Java
 String s1 = new String("HELLO"); 
 String s2 = new String("HELLO"); 
 System.out.println(s1 == s2);      // false
 System.out.println(s1.equals(s2)); // true
 ```
+
+### Regex
+
+| Syntax | Description |
+| --- | ----------- |
+| abc...| Letters |
+| 123...| Digits |
+| \d| Any digit |
+|\D|	Any Non-digit character|
+|.|	Any Character|
+|\.	|Period|
+|[abc]	|Only a, b, or c|
+|[^abc]	|Not a, b, nor c|
+|[a-z]	|Characters a to z|
+|[0-9]	|Numbers 0 to 9|
+|\w	|Any Alphanumeric character|
+|\W	|Any Non-alphanumeric character|
+|{m}|	m Repetitions|
+|{m,n}|	m to n Repetitions|
+|*|	Zero or more repetitions|
+|+|	One or more repetitions|
+|?|	Optional character|
+|\s|	Any Whitespace|
+|\S|	Any Non-whitespace character|
+|^…$|	Starts and ends|
+|(…)|	Capture Group|
+|(a(bc))|	Capture Sub-group|
+|(.*)|	Capture all|
+|(abc|def)|	Matches abc or def|
+
+
+Check if Regex is valid
+```Java
+public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+    int testCases = Integer.parseInt(in.nextLine());
+    while(testCases>0){
+        String pattern = in.nextLine();
+        try{
+            Pattern p = Pattern.compile(pattern);
+            System.out.println("Valid");
+            } catch (PatternSyntaxException e){
+            System.out.println("Invalid");
+            }
+            testCases--;
+    }
+}
+```
+
+[Learn Regex](https://regexone.com/)
+[Test Regex](https://regexr.com/)
 
 ### Scanner
 
