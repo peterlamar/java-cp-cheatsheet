@@ -167,6 +167,37 @@ public static void main(String[] args){
 }
 ```
 
+Match HTML strings
+```Java
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution{
+	public static void main(String[] args){
+		
+		Scanner in = new Scanner(System.in);
+		int testCases = Integer.parseInt(in.nextLine());
+		while(testCases>0){
+			String line = in.nextLine();
+            boolean found=false;
+			Pattern r = Pattern.compile("<(.+?)>([^<>]+)</\\1>");
+            Matcher m = r.matcher(line);
+            while (m.find()){
+                if (m.group(2).length() != 0){
+                    System.out.println(m.group(2));
+                    found = true;
+                }
+            }
+            if (!found) System.out.println("None");			
+			testCases--;
+		}
+	}
+}
+```
+
 1. [Learn Regex](https://regexone.com/)
 1. [Test Regex](https://regexr.com/)
 1. [Test Regex simple](https://regex101.com/)
