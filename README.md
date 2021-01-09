@@ -260,6 +260,16 @@ l1.add(4);
 System.out.println(l1); // [1, 2, 4]
 ```
 
+### Generics
+
+```Java
+public <T> void printArray(T[] array){
+    for (T item:array){
+        System.out.println(item);
+    }
+} 
+```
+
 ### HashMap
 
 ```Java
