@@ -344,7 +344,6 @@ public String[] reorderLogFiles(String[] logs) {
 
 ### Date
 
-
 ```Java
 import java.time.LocalDate;
 public static String findDay(int month, int day, int year) {
