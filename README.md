@@ -18,6 +18,15 @@
 
 ## Language Mechanics
 
+### Array
+
+```Java
+int a[] = new int[n];
+for (int i=0; i<n;i++){
+    a[i] = scan.nextInt();
+}
+```
+
 ### Loop
 
 Enhanced loop for iterating through collection (Java 5)
