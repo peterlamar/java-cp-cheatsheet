@@ -29,6 +29,11 @@ for (int i=0; i<n;i++){
 }
 ```
 
+```Java
+int[] game = new int[5];
+game.length // 5
+```
+
 ### ArrayList
 
 ```Java
