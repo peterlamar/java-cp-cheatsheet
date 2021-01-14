@@ -302,11 +302,13 @@ System.out.println(stack.peek());
 ### List
 
 ```Java
-List<Integer> l1 = new ArrayList<Integer>(); 
-l1.add(0, 1); // Adds 1 at 0 index 
-l1.add(1, 2); // Adds 2 at 1 index 
-l1.add(4);
-System.out.println(l1); // [1, 2, 4]
+    LinkedList<Integer> l1 = new LinkedList<>(); 
+    l1.add(0, 1); // Adds 1 at 0 index 
+    l1.add(1, 2); // Adds 2 at 1 index 
+    l1.add(4);
+    System.out.println(l1); // [1, 2, 4] 
+    l1.remove(0);
+    System.out.println(l1); // [2, 4] 
 ```
 
 ### Generics
