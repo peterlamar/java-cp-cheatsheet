@@ -331,6 +331,16 @@ System.out.print(map.containsKey(0)); // True
 System.out.print(map.get(0)); // 3
 ```
 
+### Set
+
+```Java
+Set<String> set = new HashSet<>();
+for (int i=0; i<t; i++){
+    set.add(pair_left[i] + " " + pair_right[i]);
+    System.out.println(set.size());
+}
+```
+
 ### HashSet
 
 ```Java
