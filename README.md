@@ -14,6 +14,7 @@
 1. [HashSet](#hashset)
 1. [Math](#math)
 1. [Compare](#compare)
+1. [lambda](#lambda)
 1. [Date](#date)
 
 [Algorithms](#algorithms)
@@ -403,6 +404,12 @@ public String[] reorderLogFiles(String[] logs) {
 }
 ```
 
+Class::Method
+```Java
+Collections.sort(studentList, Comparator.comparing(Student :: getCgpa).reversed().
+    thenComparing(Student :: getFname).thenComparing(Student :: getId));
+```
+
 ### Date
 
 ```Java
@@ -411,6 +418,15 @@ public static String findDay(int month, int day, int year) {
     LocalDate dt = LocalDate.of(year, month, day);
     return dt.getDayOfWeek().name(); // 'Wednesday'
 }
+```
+
+### Lambda
+
+```Java
+Stream<String> stream 
+    = Stream.of("Comb", "The", 
+                "Desert"); 
+stream.forEach(s -> System.out.println(s)); // Comb \n The \n Desert
 ```
 
 ## Algorithms
