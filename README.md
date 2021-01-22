@@ -12,6 +12,7 @@
 1. [list](#list)
 1. [HashMap](#hashmap)
 1. [HashSet](#hashset)
+1. [Deque](#deque)
 1. [Math](#math)
 1. [Compare](#compare)
 1. [lambda](#lambda)
@@ -355,6 +356,22 @@ System.out.println("After removing Australia " + h);
 Iterator<String> i = h.iterator();
 while (i.hasNext())
     System.out.println(i.next());
+```
+
+### Deque
+
+```Java
+ Deque<String> deque = new LinkedList<String>(); 
+deque.add("Element 1 (Tail)");  // Add at the last 
+deque.addFirst("Element 2 (Head)"); // Add at the first 
+deque.addLast("Element 3 (Tail)"); // Add at the last 
+deque.push("Element 4 (Head)"); // Add at the first 
+deque.offer("Element 5 (Tail)"); // Add at the last 
+deque.offerFirst("Element 6 (Head)"); // Add at the first 
+// [Element 6 (Head), Element 4 (Head), Element 2 (Head), Element 1 (Tail), Element 3 (Tail), Element 5 (Tail)]
+deque.removeFirst(); 
+deque.removeLast(); 
+// [Element 4 (Head), Element 2 (Head), Element 1 (Tail), Element 3 (Tail)]
 ```
 
 ### Math
