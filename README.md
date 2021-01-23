@@ -15,8 +15,9 @@
 1. [Deque](#deque)
 1. [Math](#math)
 1. [Compare](#compare)
-1. [lambda](#lambda)
 1. [Date](#date)
+1. [Lambda](#lambda)
+1. [Bitset](#bitset)
 
 [Algorithms](#algorithms)
 
@@ -444,6 +445,16 @@ Stream<String> stream
     = Stream.of("Comb", "The", 
                 "Desert"); 
 stream.forEach(s -> System.out.println(s)); // Comb \n The \n Desert
+```
+
+### Bitset
+```Java
+BitSet bitset1 = new BitSet(8);
+bitset1.set(0);
+bitset1.set(1);
+bitset1.set(2);
+System.out.println("Bitset1:" + bitset1); // Bitset1:{0, 1, 2}
+System.out.println("" + bitset1.cardinality()); // 3
 ```
 
 ## Algorithms
