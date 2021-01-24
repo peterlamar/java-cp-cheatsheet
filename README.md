@@ -18,6 +18,7 @@
 1. [Date](#date)
 1. [Lambda](#lambda)
 1. [Bitset](#bitset)
+1. [PriorityQueue](#priorityqueue)
 
 [Algorithms](#algorithms)
 
@@ -455,6 +456,22 @@ bitset1.set(1);
 bitset1.set(2);
 System.out.println("Bitset1:" + bitset1); // Bitset1:{0, 1, 2}
 System.out.println("" + bitset1.cardinality()); // 3
+```
+
+### PriorityQueue
+
+```Java
+PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>();
+pQueue.add(10);
+pQueue.add(20);
+pQueue.add(15);
+// Printing the top element of PriorityQueue
+System.out.println(pQueue.peek()); // 10
+// Printing the top element and removing it
+// from the PriorityQueue container
+System.out.println(pQueue.poll()); // 10
+// Printing the top element again
+System.out.println(pQueue.peek()); // 15
 ```
 
 ## Algorithms
