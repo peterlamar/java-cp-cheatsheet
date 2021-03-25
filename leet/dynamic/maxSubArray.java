@@ -15,3 +15,17 @@ class Solution {
         return rtn;
     }
 }
+
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int a1 = nums[0];
+        int a2 = nums[0];
+        for (int x = 1; x < nums.length; x++){
+            a1 = Math.max(a1+nums[x], nums[x]);
+            a2 = Math.max(a2, a1);            
+        }
+        
+        return a2;
+    }
+}
