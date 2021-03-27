@@ -19,6 +19,7 @@
 1. [Lambda](#lambda)
 1. [Bitset](#bitset)
 1. [PriorityQueue](#priorityqueue)
+1. [StringBuilder](#StringBuilder)
 
 [Algorithms](#algorithms)
 
@@ -472,6 +473,14 @@ System.out.println(pQueue.peek()); // 10
 System.out.println(pQueue.poll()); // 10
 // Printing the top element again
 System.out.println(pQueue.peek()); // 15
+```
+
+### StringBuilder
+
+```Java
+StringBuilder str = new StringBuilder();
+str.append("GFG");
+System.out.println("String = " + str.toString()); // String = GFG
 ```
 
 ## Algorithms
