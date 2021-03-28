@@ -500,6 +500,15 @@ System.out.println(Arrays.stream(arr).sum()); // 15
 List<Integer> list = Arrays.asList(3, 6, 9, 12, 15);
 list.stream().map(number -> number * 3) // returns new stream
     .forEach(System.out::println); // 9,18,27,36,45
+List<String> list2 = Arrays.asList("geeks", "gfg", "g","e", "e", "k", "s");
+List<String> answer = list2.stream()
+    .map(String::toUpperCase).collect(Collectors.toList());
+System.out.println(answer); // [GEEKS, GFG, G, E, E, K, S]
+int[][] meh = {{1,2,3},{5,6,7},{2,3}};
+System.out.println(Arrays.stream(meh)
+                    .mapToInt(customerAccount -> Arrays.stream(customerAccount).sum())
+                    .max()
+                    .getAsInt()); // 18
 ```
 
 ## Algorithms
