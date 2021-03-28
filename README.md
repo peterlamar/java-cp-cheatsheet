@@ -20,6 +20,8 @@
 1. [Bitset](#bitset)
 1. [PriorityQueue](#priorityqueue)
 1. [StringBuilder](#StringBuilder)
+1. [Stream](#Stream)
+1. [Map](#Map)
 
 [Algorithms](#algorithms)
 
@@ -481,6 +483,23 @@ System.out.println(pQueue.peek()); // 15
 StringBuilder str = new StringBuilder();
 str.append("GFG");
 System.out.println("String = " + str.toString()); // String = GFG
+```
+
+### Stream
+
+```Java
+int arr[] = { 1, 2, 3, 4, 5 };
+IntStream stream = Arrays.stream(arr, 1, 3);
+stream.forEach(str -> System.out.println(str + " ")); // 2 3
+System.out.println(Arrays.stream(arr).sum()); // 15
+```
+
+### Map
+
+```Java
+List<Integer> list = Arrays.asList(3, 6, 9, 12, 15);
+list.stream().map(number -> number * 3) // returns new stream
+    .forEach(System.out::println); // 9,18,27,36,45
 ```
 
 ## Algorithms
