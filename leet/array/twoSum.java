@@ -10,3 +10,16 @@ class Solution {
         return new int[]{0,0};
     }
 }
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> hm = new HashMap<>();
+        for (int x=0; x<nums.length; x++){
+            if (hm.containsKey(nums[x])){
+                return new int[]{hm.get(nums[x]),x};
+            }
+            hm.put(target-nums[x],x);
+        }
+        return new int[]{0,0};
+    }
+}
