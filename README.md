@@ -322,6 +322,8 @@ List is an interface and needs an [implementation](https://stackoverflow.com/que
 
 ### Generics
 
+In Java, <> brackets are used to defined [Generics](https://www.geeksforgeeks.org/angle-bracket-in-java-with-examples/)
+
 ```Java
 public <T> void printArray(T[] array){
     for (T item:array){
