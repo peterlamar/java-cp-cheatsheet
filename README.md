@@ -308,6 +308,8 @@ System.out.println(stack.peek());
 
 ### List
 
+List is an interface and needs an [implementation](https://stackoverflow.com/questions/6810691/instantiating-a-list-in-java) of the interface such as LinkedList, ArrayList, etc
+
 ```Java
     LinkedList<Integer> l1 = new LinkedList<>(); 
     l1.add(0, 1); // Adds 1 at 0 index 
