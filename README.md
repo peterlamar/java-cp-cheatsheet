@@ -323,6 +323,10 @@ List is an interface and needs an [implementation](https://stackoverflow.com/que
 ### Generics
 
 In Java, <> brackets are used to defined [Generics](https://www.geeksforgeeks.org/angle-bracket-in-java-with-examples/)
+Omitting the 2nd type is new with Java 7
+```
+Set<T> set = new HashSet<>()
+```
 
 ```Java
 public <T> void printArray(T[] array){
