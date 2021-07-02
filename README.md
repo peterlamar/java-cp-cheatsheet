@@ -11,7 +11,10 @@
 1. [Stack](#stack)
 1. [list](#list)
 1. [HashMap](#hashmap)
+1. [Set](#set)
 1. [HashSet](#hashset)
+1. [TreeSet](#treeset)
+1. [LinkedHashSet](#linkedhashset)
 1. [Deque](#deque)
 1. [Math](#math)
 1. [Compare](#compare)
@@ -348,6 +351,8 @@ System.out.print(map.get(0)); // 3
 
 ### Set
 
+A Set is a [Generic Collection](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html) that cannot contain duplicate elements. Java offers three Set implementations HashSet, TreeSet, and LinkedHashSet
+
 ```Java
 Set<String> set = new HashSet<>();
 for (int i=0; i<t; i++){
@@ -357,6 +362,8 @@ for (int i=0; i<t; i++){
 ```
 
 ### HashSet
+
+[HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html) stores its elements in a hash table, is the best-performing implementation; however it makes no guarantees concerning the order of iteration
 
 ```Java
 HashSet <String> h = new HashSet<>(); 
@@ -370,6 +377,14 @@ Iterator<String> i = h.iterator();
 while (i.hasNext())
     System.out.println(i.next());
 ```
+
+### TreeSet
+
+[TreeSet](https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html) which stores its elements in a red-black tree, orders its elements based on their values; it is substantially slower than HashSet
+
+### LinkedHashSet
+
+[LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html), which is implemented as a hash table with a linked list running through it, orders its elements based on the order in which they were inserted into the set (insertion-order). LinkedHashSet spares its clients from the unspecified, generally chaotic ordering provided by HashSet at a cost that is only slightly higher.
 
 ### Deque
 
