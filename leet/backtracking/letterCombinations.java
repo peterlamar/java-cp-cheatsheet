@@ -52,3 +52,52 @@ class Solution {
         }
     }
 }
+
+class Solution {
+    static public String[] dict = new String[]{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+
+    public List<String> letterCombinations(String digits) {
+        List<String> rtn = new ArrayList<>();
+        if (digits.length()==0) return rtn;
+        backtracking(rtn, digits.toCharArray(), "");
+        return rtn;
+    }
+    
+    public void backtracking(List<String> combos, char[] digits, String s){
+        if (s.length() == digits.length){
+            combos.add(s);
+            return;
+        }
+        int i = s.length();
+        int idx = digits[i] - '0'; 
+        
+        for (char c : dict[idx].toCharArray()){
+            backtracking(combos, digits, s + c);
+        }
+    }
+}
+
+class Solution {
+    static public String[] DICT = new String[]{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    
+    public List<String> letterCombinations(String digits) {
+        List<String> rtn = new ArrayList<>();
+        if (digits.length() == 0) return rtn;
+        backtracking(rtn, digits, "");
+        return rtn;
+    }
+    
+    public void backtracking(List<String> rtn, String digits, String s){
+        if (s.length() == digits.length()){
+            rtn.add(s);
+            return;
+        }
+
+        int i = s.length();
+        int idx = digits.charAt(i) - '0'; // Number 2
+        // for loop "abc" -> 'a', 'b', 'c'
+        for (char c : DICT[idx].toCharArray()){
+            backtracking(rtn, digits, s + c);
+        }
+    }
+}
