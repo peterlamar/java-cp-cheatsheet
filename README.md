@@ -88,13 +88,30 @@ Arrays.sort(s, new Comparator<String>() {
 
 ### Loop
 
-Enhanced loop for iterating through collection (Java 5)
 ```Java
-int ar[] = {1, 2, 3, 4, 5, 6, 7, 8}; 
-for (int i : ar) { 
-    System.out.print(i + " "); // 1 2 3 4 5 6 7 8 
+List<String> crunchyList = new ArrayList<String>();
+crunchyList.add("Blueberry");
+crunchyList.add("Peach");
+for (int i = 0; i < crunchyList.size(); i++) { // Simple loop
+    System.out.println(crunchyList.get(i));
 }
+for (String temp : crunchyList) { // enhanced loop, Java 5
+    System.out.println(temp);
+}
+Iterator<String> crunchifyIterator = crunchyList.iterator(); // Basic iterator
+while (crunchifyIterator.hasNext()) {
+    System.out.println(crunchifyIterator.next());
+}
+ListIterator<String> crunchifyListIterator = crunchyList.listIterator(); // List iterator 
+while (crunchifyListIterator.hasNext()) { // Allows forwards, backwards, etc
+    System.out.println(crunchifyListIterator.next());
+}
+crunchyList.forEach((temp) -> { // Stream iterator
+    System.out.println(temp);
+});
+crunchyList.stream().forEach((crunchifyTemp) -> System.out.println(crunchifyTemp)); // Sequential Stream
 ```
+
 
 ### String
 
