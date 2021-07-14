@@ -34,6 +34,7 @@ class Solution {
         for (Integer element: tmp){
             sum = sum + element;
         }
+        //  int sum = tmp.stream().reduce(0, Integer::sum);
         if (sum == target){
             rtn.add(new ArrayList<>(tmp));
             return;
