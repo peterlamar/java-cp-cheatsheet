@@ -204,6 +204,12 @@ System.out.println(s1 == s2);      // false
 System.out.println(s1.equals(s2)); // true
 ```
 
+```Java
+int i = 2;
+int j = 3;
+System.out.println(String.format("%d:%02d",i,j)); // 2:03
+```
+
 ### Regex
 
 | Syntax | Description |
