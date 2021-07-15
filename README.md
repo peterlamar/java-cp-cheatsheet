@@ -491,6 +491,16 @@ Stream<String> stream
 stream.forEach(s -> System.out.println(s)); // Comb \n The \n Desert
 ```
 
+### Binary
+
+```Java
+int a = 10;
+// Convert integer number to binary  format
+System.out.println(Integer.toBinaryString(a)); // 1010 
+// to print number of 1's in the number a
+System.out.println(Integer.bitCount(a)); // 2
+```
+
 ### Bitset
 ```Java
 BitSet bitset1 = new BitSet(8);
